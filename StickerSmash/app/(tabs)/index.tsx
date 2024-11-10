@@ -1,10 +1,9 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Button from "@/components/Button";
 import ImageViewer from "@/components/ImageViewer";
 
 const PlaceholderImage = require("@/assets/images/background-image.png");
 
-import { Link } from "expo-router";
 
 export default function Index() {
   return (
@@ -14,14 +13,10 @@ export default function Index() {
       </View>
       <View>
         <View style={styles.footContainer}>
-          <Button label="Choose a photo" />
+          <Button theme="primary" label="Choose a photo" />
           <Button label="Use this photo" />
         </View>
       </View>
-      <Text style={styles.text}>Home screen</Text>
-      <Link href="/about" style={styles.button}>
-        Go to About screen
-      </Link>
     </View>
   );
 }
