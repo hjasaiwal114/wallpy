@@ -18,7 +18,7 @@ export default function Button({ label, theme, onPress }: Props) {
       >
         <Pressable
           style={[styles.button, { backgroundColor: "#fff" }]}
-          onPress={(onPress) => alert("You pressed a button.")}
+          onPress={onPress || (() => alert("You pressed a button."))}
         >
           <FontAwesome
             name="picture-o"
@@ -38,7 +38,7 @@ export default function Button({ label, theme, onPress }: Props) {
     <View style={styles.buttonContainer}>
       <Pressable
         style={styles.button}
-        onPress={() => alert("You pressed a button.")}
+        onPress={onPress}
       >
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
